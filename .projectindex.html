@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE PC CRAFT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #1a1a1a;
+      --accent: #e44d26;
+      --light: #f5f5f5;
+      --dark: #333333;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--dark); background: var(--light); }
+    header {
+      background: var(--primary) url('header-bg.jpg') center/cover no-repeat;
+      height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center;
+    }
+    header h1 { font-size: 3rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; margin-bottom: 2rem; }
+    header .btn {
+      padding: .75rem 2rem; background: var(--accent); border: none; color: white;
+      font-weight: 600; font-size: 1rem; cursor: pointer; border-radius: 4px;
+      transition: background .3s;
+    }
+    header .btn:hover { background: #cf4520; }
+
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; padding: 1rem 2rem;
+      display: flex; justify-content: flex-end; background: rgba(26,26,26,0.7);
+      z-index: 1000;
+    }
+    nav a {
+      color: white; text-decoration: none; margin-left: 1.5rem; font-weight: 600;
+      transition: color .3s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+    .services, .contact { text-align: center; }
+    .services h2, .contact h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--primary); }
+    .services .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2rem;
+      margin-top: 2rem;
+    }
+    .service-item {
+      background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .service-item h3 { margin-bottom: .75rem; color: var(--accent); }
+    .service-item p { font-size: .9rem; line-height: 1.5; }
+
+    .about p {
+      max-width: 700px; margin: 0 auto; line-height: 1.6; color: var(--dark);
+    }
+
+    .contact-form {
+      max-width: 600px; margin: 2rem auto 0;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: .75rem 1rem; border: 1px solid #ccc; border-radius: 4px;
+      font-size: 1rem; resize: vertical;
+    }
+    .contact-form button {
+      width: fit-content; padding: .75rem 2rem; background: var(--accent);
+      color: white; border: none; font-weight: 600; cursor: pointer; border-radius: 4px;
+      transition: background .3s;
+    }
+    .contact-form button:hover { background: #cf4520; }
+
+    footer {
+      background: var(--primary); color: white; text-align: center; padding: 1.5rem 2rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1>THE PC CRAFT</h1>
+    <p>Custom PC Builds • Gaming Rigs • Workstations</p>
+    <button class="btn" onclick="window.location.href='#contact'">Get a Quote</button>
+  </header>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="service-item">
+        <h3>Custom PC Builds</h3>
+        <p>Tailor-made PCs built to your exact specifications—gaming, editing, or professional workstations.</p>
+      </div>
+      <div class="service-item">
+        <h3>Component Upgrades</h3>
+        <p>Upgrade your existing system with the latest CPUs, GPUs, SSDs, and more for peak performance.</p>
+      </div>
+      <div class="service-item">
+        <h3>System Troubleshooting</h3>
+        <p>Fast diagnostics and repair for hardware issues, ensuring minimal downtime and reliable operation.</p>
+      </div>
+      <div class="service-item">
+        <h3>Maintenance & Support</h3>
+        <p>Regular maintenance plans and remote/onsite support to keep your PC running smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About THE PC CRAFT</h2>
+    <p>
+      At THE PC CRAFT, we combine expert craftsmanship with the highest-quality components 
+      to deliver custom-built PCs tailored to your unique needs. From cutting-edge gaming rigs 
+      to robust professional workstations, our team in Jaipur ensures every build meets 
+      the highest standards of performance, reliability, and aesthetics.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Ready to build your dream PC? Reach out today!</p>
+    <div class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+    <p style="margin-top:1.5rem;">
+      Instagram: <a href="https://instagram.com/THE_PC_CRAFT" target="_blank">@THE_PC_CRAFT</a><br/>
+      Email: <a href="mailto:thepccraft@gmail.com">thepccraft@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 THE PC CRAFT • Crafted in Jaipur •
+    <a href="#home">Back to Top</a>
+  </footer>
+
+</body>
+</html>
